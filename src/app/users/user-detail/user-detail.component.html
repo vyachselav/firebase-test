@@ -1,0 +1,22 @@
+  <td>
+    <strong>{{userDetail?.name}}</strong>
+  </td>
+  <td>{{userDetail?.password}}</td>
+  <td>{{userDetail?.email}}</td>
+  <td>{{userDetail?.phone}}</td>
+  <td>
+    {{dateOutput}}
+    <br>
+    {{timeOutput}}
+  </td>
+  <td class="cell-middle">
+    <button class="btn btn-primary" (click)="editUser()">
+      Edit
+    </button>
+  </td>
+  <td class="cell-middle">
+    <button class="btn btn-danger" (click)="deleteUser()">
+      Delete
+    </button>
+  </td>
+

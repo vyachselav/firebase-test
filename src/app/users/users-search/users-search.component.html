@@ -1,0 +1,22 @@
+<h3>Search Users
+  <br>
+<sup>
+  (case-sensitive input)
+</sup>
+</h3>
+<br>
+<input type="text" (keyup)="search($event)" placeholder="Enter the name">
+<ul>
+  <li *ngFor="let user of users">
+    <h4>
+      <a [routerLink]="['/edit/', user?.$key]">{{user?.name}}</a>
+    </h4>
+    phone: {{user?.phone}}
+    <br>
+    email: {{user?.email}}
+  </li>
+</ul>
+
+<div *ngIf="searched && users?.length < 1">
+    No results
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+  <h3>File Upload</h3>
+
+  <div *ngFor="let upload of uploads | async">
+    <app-upload-detail [upload]='upload'></app-upload-detail>
+  </div>
+
+  <app-upload-form></app-upload-form>
+
+</div>

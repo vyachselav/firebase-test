@@ -1,0 +1,44 @@
+<div class="container">
+  <h3>
+    Add New User
+  </h3>
+  <br>
+  <button class="btn btn-primary" routerLink="/create">Add</button>
+</div>
+
+<div class="container">
+  <app-users-search></app-users-search>
+</div>
+
+<div class="container">
+  <table class="table table-bordered table-responsive">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Pass</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>
+        Creation Date
+        <br>
+        (timestamp)
+      </th>
+      <th></th>
+      <th class="cell-middle">
+        <button style="margin:auto" class="btn btn-danger" (click)="deleteAll()">
+          Delete All</button>
+      </th>
+    </tr>
+    </thead>
+    <tbody *ngIf="data && !showLoading">
+    <tr *ngFor="let d of data" app-user-detail [userDetail]="d"> </tr>
+    </tbody>
+  </table>
+  <h2 *ngIf="showLoading">
+    Loading...
+  </h2>
+  <app-user-pager [itemsPerPage]="itemsPerPage"
+             [field]="fieldBy"
+             (dataChanged)="dataChanged($event)"
+             (loadingChanged)="loadingChanged($event)"></app-user-pager>
+</div>

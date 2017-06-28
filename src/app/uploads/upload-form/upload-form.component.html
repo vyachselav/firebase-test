@@ -1,0 +1,12 @@
+<h3>Choose image</h3>
+
+<label>
+  <input type="file" class="form-control-file" (change)="detectFile($event)">
+</label>
+
+<button class="btn btn-primary"
+        [disabled]="!selectedFile"
+        (click)="uploadImage()">
+
+  Upload
+</button>

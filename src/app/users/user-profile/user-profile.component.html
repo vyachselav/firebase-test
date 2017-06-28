@@ -1,0 +1,5 @@
+<div *ngIf="auth.currentUser">
+  <h3>Name: {{ auth.currentUserDisplayName }}</h3>
+  <h3>Email: {{auth.currentUserEmail}}</h3>
+  <button (click)="logout()" class="btn">Logout</button>
+</div>

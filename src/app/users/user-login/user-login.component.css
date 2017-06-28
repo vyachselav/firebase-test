@@ -1,0 +1,12 @@
+.col-md-6 {
+  padding: 20px;
+  border: 1px solid #d3d3d3;
+  box-shadow: 0 0 2px 2px #d3d3d3;
+}
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}

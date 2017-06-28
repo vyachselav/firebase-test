@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/users">Firebase Test</a>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a routerLink="/users">Users Editor</a>
+      </li>
+      <li>
+        <a routerLink="/pictures">Pictures Uploader</a>
+      </li>
+      <li>
+        <a *ngIf="!auth.currentUser" routerLink="/login">Login</a>
+        <a *ngIf="auth.currentUser" routerLink="/profile">Profile</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

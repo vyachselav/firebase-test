@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <h3>{{action}} User</h3>
+    <br>
+<!--    <button class="btn" (click)="createDummies(13)"> Create Dummies</button>
+    <br>
+    <br>-->
+    <button class="btn" *ngIf="url !== 'login'" (click)="goBack()">< Back</button>
+    <br>
+    <br>
+    <form (ngSubmit)="doAction()" #userForm="ngForm">
+
+      <!--EMAIL-->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" class="form-control"
+               placeholder="email"
+               [(ngModel)]="user.email"
+               required minlength="2" maxlength="23"
+               name="email"
+               #email="ngModel"
+               #title='ngModel'
+               email>
+      </div>
+      <div [hidden]="email.valid || email.pristine"
+           class="alert alert-danger">
+        Email is required
+      </div>
+
+      <!--PASS-->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" class="form-control"
+               placeholder="password"
+               [(ngModel)]="user.password"
+               required minlength="2" maxlength="23"
+               name="password"
+               #password="ngModel"
+               #title='ngModel'>
+      </div>
+      <div [hidden]="password.valid || password.pristine"
+           class="alert alert-danger">
+        Password is required
+      </div>
+
+      <!--NAME-->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" class="form-control"
+               placeholder="name"
+               [(ngModel)]="user.name"
+               required minlength="2" maxlength="23"
+               name="name"
+               #name="ngModel"
+               #title='ngModel'autofocus>
+      </div>
+      <div [hidden]="name.valid || name.pristine"
+           class="alert alert-danger">
+        Name is required
+      </div>
+
+      <!--PHONE-->
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input id="phone" class="form-control"
+               placeholder="phone"
+               [(ngModel)]="user.phone"
+               name="phone"
+               #phone="ngModel"
+               #title='ngModel'>
+      </div>
+      <button type="submit" class="btn" [disabled]="!userForm.form.valid">
+        {{action}}
+      </button>
+    </form>
+  </div>
+</div>

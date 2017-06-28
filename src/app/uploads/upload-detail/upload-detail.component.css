@@ -1,0 +1,9 @@
+img {
+  width:150px;
+  height:150px;
+}
+
+.image-wrapper {
+  float:left;
+  margin:20px 30px;
+}
